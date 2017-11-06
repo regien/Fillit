@@ -6,20 +6,52 @@
 /*   By: gmalpart <gmalpart@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 19:23:13 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/11/05 00:05:45 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/11/05 19:59:10 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "fillit.h"
 
-int main (int argc, char **argv)
+/*
+static void print_usage(char *name)
 {
-	int fd;
-	
-	if (argc != 2)
+	ft_putstr("usage: ");
+	ft_putstr(name);
+	ft_putendl(" file");
+	return ;
+}
+*/
+
+int		main (int argc, char **argv)
+{
+	int		fd;
+	char	buf[21];
+
+	if (argc == 2)
 	{
-		ft_putstr("usage:\"fillit validfile.txt\n\"");
+		// haz la mierda de fillit
+		if ((fd = open(argv[1], O_RDONLY) < 0))
+		{
+			ft_putendl("Error");
+			return(0);
+		}
+		else
+		{
+			read(fd, buf, 21);
+			ft_putstr(buf);
+			close(fd);
+		}
 	}
-	fd = open(argv[1], O_RDONLY);
-	while ( `)
+	/*	else
+		print_usage(argv[0]);
+		return (0);
+		*/
+	/*
+		if (argc != 2)
+		{
+		ft_putstr("usage:\"fillit validfile.txt\n\"");
+		}
+		fd = open(argv[1], O_RDONLY);
+		while ( )
+		*/
 }
