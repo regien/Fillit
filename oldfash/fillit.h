@@ -6,9 +6,11 @@
 /*   By: gmalpart <gmalpart@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/05 19:47:40 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/11/05 19:48:54 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/11/06 11:51:48 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include <fcntl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
