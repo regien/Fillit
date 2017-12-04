@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gmalpart <gmalpart@student.42.us.org>      +#+  +:+       +#+         #
+#    By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2017/11/09 23:53:28 by gmalpart          #+#    #+#              #
-#    Updated: 2017/11/09 23:54:03 by gmalpart         ###   ########.fr        #
+#    Created: 2017/09/25 16:22:47 by gmalpart          #+#    #+#              #
+#    Updated: 2017/11/30 18:08:37 by lhernand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,16 +26,16 @@ FILES = ft_putchar.c ft_putstr.c ft_strlen.c ft_swap.c ft_strcmp.c ft_putnbr.c \
 	ft_lstadd.c ft_lstdelone.c ft_lstdel.c ft_lstiter.c ft_itoa_base.c \
 	ft_striter.c ft_striteri.c ft_lstmap.c ft_strmap.c ft_strmapi.c \
 	ft_strjoin.c ft_strsplit.c ft_wordlen.c ft_wordcount.c ft_iswspace.c \
-	ft_min.c ft_max.c
+	ft_min.c ft_max.c ft_sqrt.c ft_lstadd_back.c
 
 OBJECTS = $(FILES:.c=.o)
 
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(FLAGS) -c $(FILES)
-	ar rc $(NAME) $(OBJECTS)
-	ranlib libft.a
+	@$(CC) $(FLAGS) -c $(FILES)
+	@ar rc $(NAME) $(OBJECTS)
+	@ranlib libft.a
 
 clean:
 	@/bin/rm -f $(OBJECTS)

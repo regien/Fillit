@@ -6,7 +6,7 @@
 /*   By: regien <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 19:34:42 by regien            #+#    #+#             */
-/*   Updated: 2017/10/21 22:02:20 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/11/30 18:09:18 by lhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct		s_list
 **		GENERAL FUNCTIONS
 */
 
+int					square_root(int d);
 void				ft_putchar(char c);
 void				ft_putstr(char const *str);
 size_t				ft_strlen(char const*str);
@@ -108,6 +109,7 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+void				ft_lstadd_back(t_list **alst, t_list *new);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 #endif

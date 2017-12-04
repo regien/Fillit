@@ -1,16 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fillit.h                                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmalpart <gmalpart@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/05 19:47:40 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/11/06 11:51:48 by gmalpart         ###   ########.fr       */
+/*   Created: 2017/11/17 22:47:30 by gmalpart          #+#    #+#             */
+/*   Updated: 2017/11/30 16:40:32 by lhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
-#include <fcntl.h>
-#include <sys/types.h>
-#include <sys/stat.h>
+#include "fillit.h"
+
+int			main(int argc, char **argv)
+{
+	if (argc != 2)
+		fillit_print_usage(argv[0]);
+	else
+		fillit_run(argv[1]);
+	return (0);
+}
